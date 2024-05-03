@@ -5,15 +5,7 @@ function displayTemperature(response) {
     cityElement.innerHTML = response.data.city;
     temperatureElement.innerHTML = temperature;
     
-    let descriptionElement = document.querySelector("#description");
-    descriptionElement.innerHTML = response.data.condition.description;
-  
-    let humidityElement = document.querySelector("#humidity");
-    humidityElement.innerHTML = response.data.temperature.humidity;
-
-    let windElement = document.querySelector("#wind");
-    windElement.innerHTML = response.data.wind.speed;
-    console.log(response.data.wind.speed);
+    
   }
   
   function search(event) {
