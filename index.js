@@ -5,7 +5,18 @@ function displayTemperature(response) {
     cityElement.innerHTML = response.data.city;
     temperatureElement.innerHTML = temperature;
     
-    
+    let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = response.data.condition.description;
+
+    let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+
+    let windElement = document.querySelector("#wind");
+    windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  
+
+    let iconElement = document.querySelector("#icon");
+    iconElement.innerHTML = `<img src= "${response.data.condition.icon_url}" class="current-temperature-icon" />`;
   }
   
   function search(event) {
