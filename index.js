@@ -13,7 +13,7 @@ function displayTemperature(response) {
 
     let windElement = document.querySelector("#wind");
     windElement.innerHTML = `${response.data.wind.speed}km/h`;
-  
+
 
     let iconElement = document.querySelector("#icon");
     iconElement.innerHTML = `<img src= "${response.data.condition.icon_url}" class="current-temperature-icon" />`;
@@ -24,8 +24,8 @@ function displayTemperature(response) {
     let searchInputElement = document.querySelector("#search-input");
     let city = searchInputElement.value;
   
-    let apiKey = "b2a5adcct04b33178913oc335f405433";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    let apiKey = "0c11832fobc65a64c324b4b05a887aat";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}units=metric`;
   
     axios.get(apiUrl).then(displayTemperature);
   }
