@@ -67,8 +67,9 @@ body {
     line-height: 24px;
   }
   
-  .current-details strong {
+  #humidity, #wind, strong {
     color: #f00e52;
+font-weight: 900;
   }
   
   .current-temperature-icon {
